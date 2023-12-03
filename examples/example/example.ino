@@ -1,5 +1,5 @@
 /*
-  ShiftRegister74HC595 - Library for simplified control of 74HC595 shift registers.
+  SIPO_8_Bit_ShiftRegister - Library for simplified control of 74HC595 shift registers.
   Developed and maintained by Timo Denk and contributers, since Nov 2014.
   Additional information is available at https://timodenk.com/blog/shift-register-arduino-library/
   Released into the public domain.
@@ -9,7 +9,7 @@
 
 // create a global shift register object
 // parameters: <number of shift registers> (data pin, clock pin, latch pin)
-ShiftRegister74HC595<1> sr(0, 1, 2);
+SIPO_8_Bit_ShiftRegister<1> sr(0, 1, 2);
  
 void setup() { 
 }

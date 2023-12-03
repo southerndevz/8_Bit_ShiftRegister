@@ -1,5 +1,5 @@
 /*
-  ShiftRegister74HC595.h - Library for simplified control of 74HC595 shift registers.
+  SIPO_8_Bit_ShiftRegister.h - Library for simplified control of 74HC595 shift registers.
   Developed and maintained by Timo Denk and contributers, since Nov 2014.
   Additional information is available at https://timodenk.com/blog/shift-register-arduino-library/
   Released into the public domain.
@@ -9,11 +9,11 @@
 
 #include <Arduino.h>
 
-template<uint8_t Size>
-class ShiftRegister74HC595 
+template<uint8_t DaisyChainSize>
+class SIPO_8_Bit_ShiftRegister 
 {
 public:
-    ShiftRegister74HC595(const uint8_t serialDataPin, const uint8_t clockPin, const uint8_t latchPin);
+    SIPO_8_Bit_ShiftRegister(const uint8_t serialDataPin, const uint8_t clockPin, const uint8_t latchPin);
     
     void setAll(const uint8_t * digitalValues);
 #ifdef __AVR__
@@ -32,7 +32,7 @@ private:
     uint8_t _serialDataPin;
     uint8_t _latchPin;
 
-    uint8_t  _digitalValues[Size];
+    uint8_t  _digitalValues[DaisyChainSize];
 };
 
 #include "ShiftRegister74HC595.hpp"
